@@ -1,4 +1,0 @@
-martinspencer.de
-================
-
-personal website
