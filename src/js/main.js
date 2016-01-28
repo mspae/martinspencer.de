@@ -1,4 +1,4 @@
-;(function() {
-  let hey= 'hey';
-  hey += hey;
+;(function () {
+  let hey = 'hey'
+  hey += hey
 })()

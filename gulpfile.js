@@ -23,7 +23,7 @@ const options = {
   fontFiles: ['./src/font/**'],
   fontOutput: './build/font',
 
-  htmlFiles: ['./src/**/.html'],
+  htmlFiles: ['./src/**/*.html'],
   htmlOutput: './build/',
   debug: true
 }
@@ -42,7 +42,7 @@ gulp.task('js', bundle)
 b.on('update', bundle)
 b.on('log', plugins.util.log)
 
-function onError(err) {
+function onError (err) {
   plugins.util.log('\n', plugins.util.colors.red(err), '\n')
 }
 
@@ -132,7 +132,7 @@ gulp.task('html', () => {
 })
 
 gulp.task('watch', () => {
-  plugins.livereload.listen();
+  plugins.livereload.listen()
   gulp.start('sass')
   gulp.start('img')
   gulp.start('font')
