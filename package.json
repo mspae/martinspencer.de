@@ -1,5 +1,5 @@
 {
-  "name": "ms",
+  "name": "martinspencer.de",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.html",
@@ -8,9 +8,11 @@
     "format": "standard-format -w src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Martin Spencer <mail@martinspencer.de>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "obfuscemail": "^0.1.2"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",

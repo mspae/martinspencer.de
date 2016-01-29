@@ -86,19 +86,11 @@ gulp.task('sass', () => {
 
   return gulp.src(options.sassEntries)
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass())
-    .on('error', onError)
+    .pipe(plugins.sass().on('error', plugins.sass.logError))
+
     .pipe(plugins.autoprefixer({
       browsers: [
-        '> 1%',
         'last 2 versions',
-        'firefox >= 4',
-        'safari 7',
-        'safari 8',
-        'IE 8',
-        'IE 9',
-        'IE 10',
-        'IE 11'
       ],
       cascade: false
     }))
@@ -124,11 +116,15 @@ gulp.task('img', () => {
 gulp.task('font', () => {
   return gulp.src(options.fontFiles)
     .pipe(gulp.dest(options.fontOutput))
+    .on('error', onError)
+    .pipe(plugins.livereload())
 })
 
 gulp.task('html', () => {
   return gulp.src(options.htmlFiles)
     .pipe(gulp.dest(options.htmlOutput))
+    .on('error', onError)
+    .pipe(plugins.livereload())
 })
 
 gulp.task('watch', () => {
