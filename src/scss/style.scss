@@ -1,8 +1,9 @@
-$font-color: #fff;
-$body-bg: #60A0B6;
+$body-bg: #B63BAC;
+$font-color: lighten($body-bg, 25%);
+$link-hover: darken($body-bg, 25%);
 $font-size: 24px;
 $line-height: 1.6em;
-$font-size-sm: 20px;
+$font-size-sm: 16px;
 $line-height-sm: $line-height;
 
 body {
@@ -20,18 +21,36 @@ body {
 
 
 @mixin underlineMask($color) {
-  text-shadow: -0.25em 0.2em 0 $color, -0.15em 0.2em 0 $color, -0.1em 0.2em 0 $color, 0em 0.2em 0 $color, 0.15em 0.2em 0 $color, 0.25em 0.2em 0 $color, -0.25em 0.125em 0 $color, -0.15em 0.125em 0 $color, 0em 0.125em 0 $color, 0.15em 0.125em 0 $color, 0.25em 0.125em 0 $color, 0.1em 0.125em 0 $color, -0.15em 0.1em 0 $color, 0.15em 0.1em 0 $color, -0.1em 0.1em 0 $color, 0em 0.1em 0 $color, 0.1em 0.1em 0 $color;
+  text-shadow: -0.25em 0.2em 0 $color, -0.2em 0.2em 0 $color, -0.15em 0.2em 0 $color, -0.1em 0.2em 0 $color, 0em 0.2em 0 $color, 0.1em 0.2em 0 $color, 0.15em 0.2em 0 $color, 0.2em 0.2em 0 $color, 0.25em 0.2em 0 $color, -0.25em 0.15em 0 $color, -0.2em 0.15em 0 $color, -0.15em 0.15em 0 $color, -0.1em 0.15em 0 $color, 0em 0.15em 0 $color, 0.1em 0.15em 0 $color, 0.15em 0.15em 0 $color, 0.2em 0.15em 0 $color, 0.25em 0.15em 0 $color, -0.25em 0.125em 0 $color, -0.2em 0.125em 0 $color, -0.15em 0.125em 0 $color, -0.1em 0.125em 0 $color, 0em 0.125em 0 $color, 0.1em 0.125em 0 $color, 0.15em 0.125em 0 $color, 0.2em 0.125em 0 $color, 0.25em 0.125em 0 $color, -0.25em 0.1em 0 $color, -0.2em 0.1em 0 $color, -0.15em 0.1em 0 $color, -0.1em 0.1em 0 $color, 0em 0.1em 0 $color, 0.1em 0.1em 0 $color, 0.15em 0.1em 0 $color, 0.2em 0.1em 0 $color, 0.25em 0.1em 0 $color, -0.25em 0.075em 0 $color, -0.2em 0.075em 0 $color, -0.15em 0.075em 0 $color, -0.1em 0.075em 0 $color, 0em 0.075em 0 $color, 0.1em 0.075em 0 $color, 0.15em 0.075em 0 $color, 0.2em 0.075em 0 $color, 0.25em 0.075em 0 $color, -0.25em 0.05em 0 $color, -0.2em 0.05em 0 $color, -0.15em 0.05em 0 $color, -0.1em 0.05em 0 $color, 0em 0.05em 0 $color, 0.1em 0.05em 0 $color, 0.15em 0.05em 0 $color, 0.2em 0.05em 0 $color, 0.25em 0.05em 0 $color, -0.25em 0.025em 0 $color, -0.2em 0.025em 0 $color, -0.15em 0.025em 0 $color, -0.1em 0.025em 0 $color, 0em 0.025em 0 $color, 0.1em 0.025em 0 $color, 0.15em 0.025em 0 $color, 0.2em 0.025em 0 $color, 0.25em 0.025em 0 $color, -0.25em 0em 0 $color, -0.2em 0em 0 $color, -0.15em 0em 0 $color, -0.1em 0em 0 $color, 0em 0em 0 $color, 0.1em 0em 0 $color, 0.15em 0em 0 $color, 0.2em 0em 0 $color, 0.25em 0em 0 $color, -0.25em -0.025em 0 $color, -0.2em -0.025em 0 $color, -0.15em -0.025em 0 $color, -0.1em -0.025em 0 $color, 0em -0.025em 0 $color, 0.1em -0.025em 0 $color, 0.15em -0.025em 0 $color, 0.2em -0.025em 0 $color, 0.25em -0.025em 0 $color;
 }
 
 @mixin underline($background-color, $color, $selection-color: $color) {
   color: $color;
   text-decoration: none;
   @include underlineMask($background-color);
-  background-image: linear-gradient($background-color, $background-color), linear-gradient($background-color, $background-color), linear-gradient($color, $color);
-  background-size: 0.09em 0.09em;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0% 0%, 0 0, 0% 85%;
-  overflow: visible;
+  z-index: -1;
+  //background-image: linear-gradient($background-color, $background-color), linear-gradient($background-color, $background-color), linear-gradient($color, $color);
+  //background-size: 0.09em 0.09em;
+  //background-repeat: no-repeat, no-repeat, repeat-x;
+  //background-position: 0% 0%, 0 0, 0% 85%;
+  position: static;
+
+  &:after {
+    content: '';
+    display: block;
+    //position: absolute;
+    height: 2px;
+
+    @media screen and (max-width: 600px) {
+      height: 1px;
+    }
+    margin-top: -0.3em;
+    width: 100%;
+    left: 0;
+    background: $color;
+    z-index: -1;
+  }
+  //overflow: visible;
 
   &::selection {
     @include underlineMask($selection-color);
@@ -49,6 +68,15 @@ body {
 
   &:visited {
     color: $color;
+  }
+}
+
+@mixin sm-font {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+
+  a:after {
+    height: 1px;
   }
 }
 
@@ -81,12 +109,12 @@ a {
   display: inline-block;
   color: $font-color;
   text-decoration: none;
-  transition: all 200ms linear;
+  //transition: all 200ms linear;
   @include underline($body-bg, $font-color);
 
   &:hover,
   &:active {
-    @include underline(darken($body-bg, 5%), $font-color);
+    @include underline($body-bg, $link-hover);
   }
 }
 
@@ -102,4 +130,23 @@ a {
 .content {
   margin: 10%;
   max-width: 600px;
+}
+
+.footer-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include sm-font;
+
+  a {
+    margin: 0 10%;
+  }
+}
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  @include sm-font;
 }

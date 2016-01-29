@@ -79,15 +79,14 @@ function bundle () {
  * Compiles sass and adds browser prefixes
  */
 gulp.task('sass', () => {
-  gulp.src(options.sassEntries)
+  /*gulp.src(options.sassEntries)
     .pipe(plugins.cssfmt())
     .on('error', onError)
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./'))*/
 
   return gulp.src(options.sassEntries)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass().on('error', plugins.sass.logError))
-
     .pipe(plugins.autoprefixer({
       browsers: [
         'last 2 versions',

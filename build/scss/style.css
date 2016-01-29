@@ -11,14 +11,14 @@ body {
 
 body {
   font-family: overpass, sans;
-  background: #60A0B6;
-  color: #fff;
+  background: #B63BAC;
+  color: #dc94d6;
   font-size: 24px;
   line-height: 1.6em;
   letter-spacing: 0.03em; }
   @media screen and (max-width: 600px) {
     body {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.6em; } }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,52 +32,69 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   display: inline-block;
-  color: #fff;
+  color: #dc94d6;
   text-decoration: none;
-  transition: all 200ms linear;
-  color: #fff;
+  color: #dc94d6;
   text-decoration: none;
-  text-shadow: -0.25em 0.2em 0 #60A0B6, -0.15em 0.2em 0 #60A0B6, -0.1em 0.2em 0 #60A0B6, 0em 0.2em 0 #60A0B6, 0.15em 0.2em 0 #60A0B6, 0.25em 0.2em 0 #60A0B6, -0.25em 0.125em 0 #60A0B6, -0.15em 0.125em 0 #60A0B6, 0em 0.125em 0 #60A0B6, 0.15em 0.125em 0 #60A0B6, 0.25em 0.125em 0 #60A0B6, 0.1em 0.125em 0 #60A0B6, -0.15em 0.1em 0 #60A0B6, 0.15em 0.1em 0 #60A0B6, -0.1em 0.1em 0 #60A0B6, 0em 0.1em 0 #60A0B6, 0.1em 0.1em 0 #60A0B6;
-  background-image: linear-gradient(#60A0B6, #60A0B6), linear-gradient(#60A0B6, #60A0B6), linear-gradient(#fff, #fff);
-  background-size: 0.09em 0.09em;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0% 0%, 0 0, 0% 85%;
-  overflow: visible; }
+  text-shadow: -0.25em 0.2em 0 #B63BAC, -0.2em 0.2em 0 #B63BAC, -0.15em 0.2em 0 #B63BAC, -0.1em 0.2em 0 #B63BAC, 0em 0.2em 0 #B63BAC, 0.1em 0.2em 0 #B63BAC, 0.15em 0.2em 0 #B63BAC, 0.2em 0.2em 0 #B63BAC, 0.25em 0.2em 0 #B63BAC, -0.25em 0.15em 0 #B63BAC, -0.2em 0.15em 0 #B63BAC, -0.15em 0.15em 0 #B63BAC, -0.1em 0.15em 0 #B63BAC, 0em 0.15em 0 #B63BAC, 0.1em 0.15em 0 #B63BAC, 0.15em 0.15em 0 #B63BAC, 0.2em 0.15em 0 #B63BAC, 0.25em 0.15em 0 #B63BAC, -0.25em 0.125em 0 #B63BAC, -0.2em 0.125em 0 #B63BAC, -0.15em 0.125em 0 #B63BAC, -0.1em 0.125em 0 #B63BAC, 0em 0.125em 0 #B63BAC, 0.1em 0.125em 0 #B63BAC, 0.15em 0.125em 0 #B63BAC, 0.2em 0.125em 0 #B63BAC, 0.25em 0.125em 0 #B63BAC, -0.25em 0.1em 0 #B63BAC, -0.2em 0.1em 0 #B63BAC, -0.15em 0.1em 0 #B63BAC, -0.1em 0.1em 0 #B63BAC, 0em 0.1em 0 #B63BAC, 0.1em 0.1em 0 #B63BAC, 0.15em 0.1em 0 #B63BAC, 0.2em 0.1em 0 #B63BAC, 0.25em 0.1em 0 #B63BAC, -0.25em 0.075em 0 #B63BAC, -0.2em 0.075em 0 #B63BAC, -0.15em 0.075em 0 #B63BAC, -0.1em 0.075em 0 #B63BAC, 0em 0.075em 0 #B63BAC, 0.1em 0.075em 0 #B63BAC, 0.15em 0.075em 0 #B63BAC, 0.2em 0.075em 0 #B63BAC, 0.25em 0.075em 0 #B63BAC, -0.25em 0.05em 0 #B63BAC, -0.2em 0.05em 0 #B63BAC, -0.15em 0.05em 0 #B63BAC, -0.1em 0.05em 0 #B63BAC, 0em 0.05em 0 #B63BAC, 0.1em 0.05em 0 #B63BAC, 0.15em 0.05em 0 #B63BAC, 0.2em 0.05em 0 #B63BAC, 0.25em 0.05em 0 #B63BAC, -0.25em 0.025em 0 #B63BAC, -0.2em 0.025em 0 #B63BAC, -0.15em 0.025em 0 #B63BAC, -0.1em 0.025em 0 #B63BAC, 0em 0.025em 0 #B63BAC, 0.1em 0.025em 0 #B63BAC, 0.15em 0.025em 0 #B63BAC, 0.2em 0.025em 0 #B63BAC, 0.25em 0.025em 0 #B63BAC, -0.25em 0em 0 #B63BAC, -0.2em 0em 0 #B63BAC, -0.15em 0em 0 #B63BAC, -0.1em 0em 0 #B63BAC, 0em 0em 0 #B63BAC, 0.1em 0em 0 #B63BAC, 0.15em 0em 0 #B63BAC, 0.2em 0em 0 #B63BAC, 0.25em 0em 0 #B63BAC, -0.25em -0.025em 0 #B63BAC, -0.2em -0.025em 0 #B63BAC, -0.15em -0.025em 0 #B63BAC, -0.1em -0.025em 0 #B63BAC, 0em -0.025em 0 #B63BAC, 0.1em -0.025em 0 #B63BAC, 0.15em -0.025em 0 #B63BAC, 0.2em -0.025em 0 #B63BAC, 0.25em -0.025em 0 #B63BAC;
+  z-index: -1;
+  position: static; }
+  a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: -0.3em;
+    width: 100%;
+    left: 0;
+    background: #dc94d6;
+    z-index: -1; }
+    @media screen and (max-width: 600px) {
+      a:after {
+        height: 1px; } }
   a::-moz-selection {
-    text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+    text-shadow: -0.25em 0.2em 0 #dc94d6, -0.2em 0.2em 0 #dc94d6, -0.15em 0.2em 0 #dc94d6, -0.1em 0.2em 0 #dc94d6, 0em 0.2em 0 #dc94d6, 0.1em 0.2em 0 #dc94d6, 0.15em 0.2em 0 #dc94d6, 0.2em 0.2em 0 #dc94d6, 0.25em 0.2em 0 #dc94d6, -0.25em 0.15em 0 #dc94d6, -0.2em 0.15em 0 #dc94d6, -0.15em 0.15em 0 #dc94d6, -0.1em 0.15em 0 #dc94d6, 0em 0.15em 0 #dc94d6, 0.1em 0.15em 0 #dc94d6, 0.15em 0.15em 0 #dc94d6, 0.2em 0.15em 0 #dc94d6, 0.25em 0.15em 0 #dc94d6, -0.25em 0.125em 0 #dc94d6, -0.2em 0.125em 0 #dc94d6, -0.15em 0.125em 0 #dc94d6, -0.1em 0.125em 0 #dc94d6, 0em 0.125em 0 #dc94d6, 0.1em 0.125em 0 #dc94d6, 0.15em 0.125em 0 #dc94d6, 0.2em 0.125em 0 #dc94d6, 0.25em 0.125em 0 #dc94d6, -0.25em 0.1em 0 #dc94d6, -0.2em 0.1em 0 #dc94d6, -0.15em 0.1em 0 #dc94d6, -0.1em 0.1em 0 #dc94d6, 0em 0.1em 0 #dc94d6, 0.1em 0.1em 0 #dc94d6, 0.15em 0.1em 0 #dc94d6, 0.2em 0.1em 0 #dc94d6, 0.25em 0.1em 0 #dc94d6, -0.25em 0.075em 0 #dc94d6, -0.2em 0.075em 0 #dc94d6, -0.15em 0.075em 0 #dc94d6, -0.1em 0.075em 0 #dc94d6, 0em 0.075em 0 #dc94d6, 0.1em 0.075em 0 #dc94d6, 0.15em 0.075em 0 #dc94d6, 0.2em 0.075em 0 #dc94d6, 0.25em 0.075em 0 #dc94d6, -0.25em 0.05em 0 #dc94d6, -0.2em 0.05em 0 #dc94d6, -0.15em 0.05em 0 #dc94d6, -0.1em 0.05em 0 #dc94d6, 0em 0.05em 0 #dc94d6, 0.1em 0.05em 0 #dc94d6, 0.15em 0.05em 0 #dc94d6, 0.2em 0.05em 0 #dc94d6, 0.25em 0.05em 0 #dc94d6, -0.25em 0.025em 0 #dc94d6, -0.2em 0.025em 0 #dc94d6, -0.15em 0.025em 0 #dc94d6, -0.1em 0.025em 0 #dc94d6, 0em 0.025em 0 #dc94d6, 0.1em 0.025em 0 #dc94d6, 0.15em 0.025em 0 #dc94d6, 0.2em 0.025em 0 #dc94d6, 0.25em 0.025em 0 #dc94d6, -0.25em 0em 0 #dc94d6, -0.2em 0em 0 #dc94d6, -0.15em 0em 0 #dc94d6, -0.1em 0em 0 #dc94d6, 0em 0em 0 #dc94d6, 0.1em 0em 0 #dc94d6, 0.15em 0em 0 #dc94d6, 0.2em 0em 0 #dc94d6, 0.25em 0em 0 #dc94d6, -0.25em -0.025em 0 #dc94d6, -0.2em -0.025em 0 #dc94d6, -0.15em -0.025em 0 #dc94d6, -0.1em -0.025em 0 #dc94d6, 0em -0.025em 0 #dc94d6, 0.1em -0.025em 0 #dc94d6, 0.15em -0.025em 0 #dc94d6, 0.2em -0.025em 0 #dc94d6, 0.25em -0.025em 0 #dc94d6;
     background: selection-color; }
   a::selection {
-    text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+    text-shadow: -0.25em 0.2em 0 #dc94d6, -0.2em 0.2em 0 #dc94d6, -0.15em 0.2em 0 #dc94d6, -0.1em 0.2em 0 #dc94d6, 0em 0.2em 0 #dc94d6, 0.1em 0.2em 0 #dc94d6, 0.15em 0.2em 0 #dc94d6, 0.2em 0.2em 0 #dc94d6, 0.25em 0.2em 0 #dc94d6, -0.25em 0.15em 0 #dc94d6, -0.2em 0.15em 0 #dc94d6, -0.15em 0.15em 0 #dc94d6, -0.1em 0.15em 0 #dc94d6, 0em 0.15em 0 #dc94d6, 0.1em 0.15em 0 #dc94d6, 0.15em 0.15em 0 #dc94d6, 0.2em 0.15em 0 #dc94d6, 0.25em 0.15em 0 #dc94d6, -0.25em 0.125em 0 #dc94d6, -0.2em 0.125em 0 #dc94d6, -0.15em 0.125em 0 #dc94d6, -0.1em 0.125em 0 #dc94d6, 0em 0.125em 0 #dc94d6, 0.1em 0.125em 0 #dc94d6, 0.15em 0.125em 0 #dc94d6, 0.2em 0.125em 0 #dc94d6, 0.25em 0.125em 0 #dc94d6, -0.25em 0.1em 0 #dc94d6, -0.2em 0.1em 0 #dc94d6, -0.15em 0.1em 0 #dc94d6, -0.1em 0.1em 0 #dc94d6, 0em 0.1em 0 #dc94d6, 0.1em 0.1em 0 #dc94d6, 0.15em 0.1em 0 #dc94d6, 0.2em 0.1em 0 #dc94d6, 0.25em 0.1em 0 #dc94d6, -0.25em 0.075em 0 #dc94d6, -0.2em 0.075em 0 #dc94d6, -0.15em 0.075em 0 #dc94d6, -0.1em 0.075em 0 #dc94d6, 0em 0.075em 0 #dc94d6, 0.1em 0.075em 0 #dc94d6, 0.15em 0.075em 0 #dc94d6, 0.2em 0.075em 0 #dc94d6, 0.25em 0.075em 0 #dc94d6, -0.25em 0.05em 0 #dc94d6, -0.2em 0.05em 0 #dc94d6, -0.15em 0.05em 0 #dc94d6, -0.1em 0.05em 0 #dc94d6, 0em 0.05em 0 #dc94d6, 0.1em 0.05em 0 #dc94d6, 0.15em 0.05em 0 #dc94d6, 0.2em 0.05em 0 #dc94d6, 0.25em 0.05em 0 #dc94d6, -0.25em 0.025em 0 #dc94d6, -0.2em 0.025em 0 #dc94d6, -0.15em 0.025em 0 #dc94d6, -0.1em 0.025em 0 #dc94d6, 0em 0.025em 0 #dc94d6, 0.1em 0.025em 0 #dc94d6, 0.15em 0.025em 0 #dc94d6, 0.2em 0.025em 0 #dc94d6, 0.25em 0.025em 0 #dc94d6, -0.25em 0em 0 #dc94d6, -0.2em 0em 0 #dc94d6, -0.15em 0em 0 #dc94d6, -0.1em 0em 0 #dc94d6, 0em 0em 0 #dc94d6, 0.1em 0em 0 #dc94d6, 0.15em 0em 0 #dc94d6, 0.2em 0em 0 #dc94d6, 0.25em 0em 0 #dc94d6, -0.25em -0.025em 0 #dc94d6, -0.2em -0.025em 0 #dc94d6, -0.15em -0.025em 0 #dc94d6, -0.1em -0.025em 0 #dc94d6, 0em -0.025em 0 #dc94d6, 0.1em -0.025em 0 #dc94d6, 0.15em -0.025em 0 #dc94d6, 0.2em -0.025em 0 #dc94d6, 0.25em -0.025em 0 #dc94d6;
     background: selection-color; }
   a::-moz-selection {
-    text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+    text-shadow: -0.25em 0.2em 0 #dc94d6, -0.2em 0.2em 0 #dc94d6, -0.15em 0.2em 0 #dc94d6, -0.1em 0.2em 0 #dc94d6, 0em 0.2em 0 #dc94d6, 0.1em 0.2em 0 #dc94d6, 0.15em 0.2em 0 #dc94d6, 0.2em 0.2em 0 #dc94d6, 0.25em 0.2em 0 #dc94d6, -0.25em 0.15em 0 #dc94d6, -0.2em 0.15em 0 #dc94d6, -0.15em 0.15em 0 #dc94d6, -0.1em 0.15em 0 #dc94d6, 0em 0.15em 0 #dc94d6, 0.1em 0.15em 0 #dc94d6, 0.15em 0.15em 0 #dc94d6, 0.2em 0.15em 0 #dc94d6, 0.25em 0.15em 0 #dc94d6, -0.25em 0.125em 0 #dc94d6, -0.2em 0.125em 0 #dc94d6, -0.15em 0.125em 0 #dc94d6, -0.1em 0.125em 0 #dc94d6, 0em 0.125em 0 #dc94d6, 0.1em 0.125em 0 #dc94d6, 0.15em 0.125em 0 #dc94d6, 0.2em 0.125em 0 #dc94d6, 0.25em 0.125em 0 #dc94d6, -0.25em 0.1em 0 #dc94d6, -0.2em 0.1em 0 #dc94d6, -0.15em 0.1em 0 #dc94d6, -0.1em 0.1em 0 #dc94d6, 0em 0.1em 0 #dc94d6, 0.1em 0.1em 0 #dc94d6, 0.15em 0.1em 0 #dc94d6, 0.2em 0.1em 0 #dc94d6, 0.25em 0.1em 0 #dc94d6, -0.25em 0.075em 0 #dc94d6, -0.2em 0.075em 0 #dc94d6, -0.15em 0.075em 0 #dc94d6, -0.1em 0.075em 0 #dc94d6, 0em 0.075em 0 #dc94d6, 0.1em 0.075em 0 #dc94d6, 0.15em 0.075em 0 #dc94d6, 0.2em 0.075em 0 #dc94d6, 0.25em 0.075em 0 #dc94d6, -0.25em 0.05em 0 #dc94d6, -0.2em 0.05em 0 #dc94d6, -0.15em 0.05em 0 #dc94d6, -0.1em 0.05em 0 #dc94d6, 0em 0.05em 0 #dc94d6, 0.1em 0.05em 0 #dc94d6, 0.15em 0.05em 0 #dc94d6, 0.2em 0.05em 0 #dc94d6, 0.25em 0.05em 0 #dc94d6, -0.25em 0.025em 0 #dc94d6, -0.2em 0.025em 0 #dc94d6, -0.15em 0.025em 0 #dc94d6, -0.1em 0.025em 0 #dc94d6, 0em 0.025em 0 #dc94d6, 0.1em 0.025em 0 #dc94d6, 0.15em 0.025em 0 #dc94d6, 0.2em 0.025em 0 #dc94d6, 0.25em 0.025em 0 #dc94d6, -0.25em 0em 0 #dc94d6, -0.2em 0em 0 #dc94d6, -0.15em 0em 0 #dc94d6, -0.1em 0em 0 #dc94d6, 0em 0em 0 #dc94d6, 0.1em 0em 0 #dc94d6, 0.15em 0em 0 #dc94d6, 0.2em 0em 0 #dc94d6, 0.25em 0em 0 #dc94d6, -0.25em -0.025em 0 #dc94d6, -0.2em -0.025em 0 #dc94d6, -0.15em -0.025em 0 #dc94d6, -0.1em -0.025em 0 #dc94d6, 0em -0.025em 0 #dc94d6, 0.1em -0.025em 0 #dc94d6, 0.15em -0.025em 0 #dc94d6, 0.2em -0.025em 0 #dc94d6, 0.25em -0.025em 0 #dc94d6;
     background: selection-color; }
   a:before, a:after, a *, a *:before, a *:after {
     text-shadow: none; }
   a:visited {
-    color: #fff; }
+    color: #dc94d6; }
   a:hover, a:active {
-    color: #fff;
+    color: #561c51;
     text-decoration: none;
-    text-shadow: -0.25em 0.2em 0 #4f95ad, -0.15em 0.2em 0 #4f95ad, -0.1em 0.2em 0 #4f95ad, 0em 0.2em 0 #4f95ad, 0.15em 0.2em 0 #4f95ad, 0.25em 0.2em 0 #4f95ad, -0.25em 0.125em 0 #4f95ad, -0.15em 0.125em 0 #4f95ad, 0em 0.125em 0 #4f95ad, 0.15em 0.125em 0 #4f95ad, 0.25em 0.125em 0 #4f95ad, 0.1em 0.125em 0 #4f95ad, -0.15em 0.1em 0 #4f95ad, 0.15em 0.1em 0 #4f95ad, -0.1em 0.1em 0 #4f95ad, 0em 0.1em 0 #4f95ad, 0.1em 0.1em 0 #4f95ad;
-    background-image: linear-gradient(#4f95ad, #4f95ad), linear-gradient(#4f95ad, #4f95ad), linear-gradient(#fff, #fff);
-    background-size: 0.09em 0.09em;
-    background-repeat: no-repeat, no-repeat, repeat-x;
-    background-position: 0% 0%, 0 0, 0% 85%;
-    overflow: visible; }
+    text-shadow: -0.25em 0.2em 0 #B63BAC, -0.2em 0.2em 0 #B63BAC, -0.15em 0.2em 0 #B63BAC, -0.1em 0.2em 0 #B63BAC, 0em 0.2em 0 #B63BAC, 0.1em 0.2em 0 #B63BAC, 0.15em 0.2em 0 #B63BAC, 0.2em 0.2em 0 #B63BAC, 0.25em 0.2em 0 #B63BAC, -0.25em 0.15em 0 #B63BAC, -0.2em 0.15em 0 #B63BAC, -0.15em 0.15em 0 #B63BAC, -0.1em 0.15em 0 #B63BAC, 0em 0.15em 0 #B63BAC, 0.1em 0.15em 0 #B63BAC, 0.15em 0.15em 0 #B63BAC, 0.2em 0.15em 0 #B63BAC, 0.25em 0.15em 0 #B63BAC, -0.25em 0.125em 0 #B63BAC, -0.2em 0.125em 0 #B63BAC, -0.15em 0.125em 0 #B63BAC, -0.1em 0.125em 0 #B63BAC, 0em 0.125em 0 #B63BAC, 0.1em 0.125em 0 #B63BAC, 0.15em 0.125em 0 #B63BAC, 0.2em 0.125em 0 #B63BAC, 0.25em 0.125em 0 #B63BAC, -0.25em 0.1em 0 #B63BAC, -0.2em 0.1em 0 #B63BAC, -0.15em 0.1em 0 #B63BAC, -0.1em 0.1em 0 #B63BAC, 0em 0.1em 0 #B63BAC, 0.1em 0.1em 0 #B63BAC, 0.15em 0.1em 0 #B63BAC, 0.2em 0.1em 0 #B63BAC, 0.25em 0.1em 0 #B63BAC, -0.25em 0.075em 0 #B63BAC, -0.2em 0.075em 0 #B63BAC, -0.15em 0.075em 0 #B63BAC, -0.1em 0.075em 0 #B63BAC, 0em 0.075em 0 #B63BAC, 0.1em 0.075em 0 #B63BAC, 0.15em 0.075em 0 #B63BAC, 0.2em 0.075em 0 #B63BAC, 0.25em 0.075em 0 #B63BAC, -0.25em 0.05em 0 #B63BAC, -0.2em 0.05em 0 #B63BAC, -0.15em 0.05em 0 #B63BAC, -0.1em 0.05em 0 #B63BAC, 0em 0.05em 0 #B63BAC, 0.1em 0.05em 0 #B63BAC, 0.15em 0.05em 0 #B63BAC, 0.2em 0.05em 0 #B63BAC, 0.25em 0.05em 0 #B63BAC, -0.25em 0.025em 0 #B63BAC, -0.2em 0.025em 0 #B63BAC, -0.15em 0.025em 0 #B63BAC, -0.1em 0.025em 0 #B63BAC, 0em 0.025em 0 #B63BAC, 0.1em 0.025em 0 #B63BAC, 0.15em 0.025em 0 #B63BAC, 0.2em 0.025em 0 #B63BAC, 0.25em 0.025em 0 #B63BAC, -0.25em 0em 0 #B63BAC, -0.2em 0em 0 #B63BAC, -0.15em 0em 0 #B63BAC, -0.1em 0em 0 #B63BAC, 0em 0em 0 #B63BAC, 0.1em 0em 0 #B63BAC, 0.15em 0em 0 #B63BAC, 0.2em 0em 0 #B63BAC, 0.25em 0em 0 #B63BAC, -0.25em -0.025em 0 #B63BAC, -0.2em -0.025em 0 #B63BAC, -0.15em -0.025em 0 #B63BAC, -0.1em -0.025em 0 #B63BAC, 0em -0.025em 0 #B63BAC, 0.1em -0.025em 0 #B63BAC, 0.15em -0.025em 0 #B63BAC, 0.2em -0.025em 0 #B63BAC, 0.25em -0.025em 0 #B63BAC;
+    z-index: -1;
+    position: static; }
+    a:hover:after, a:active:after {
+      content: '';
+      display: block;
+      height: 2px;
+      margin-top: -0.3em;
+      width: 100%;
+      left: 0;
+      background: #561c51;
+      z-index: -1; }
+      @media screen and (max-width: 600px) {
+        a:hover:after, a:active:after {
+          height: 1px; } }
     a:hover::-moz-selection, a:active::-moz-selection {
-      text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+      text-shadow: -0.25em 0.2em 0 #561c51, -0.2em 0.2em 0 #561c51, -0.15em 0.2em 0 #561c51, -0.1em 0.2em 0 #561c51, 0em 0.2em 0 #561c51, 0.1em 0.2em 0 #561c51, 0.15em 0.2em 0 #561c51, 0.2em 0.2em 0 #561c51, 0.25em 0.2em 0 #561c51, -0.25em 0.15em 0 #561c51, -0.2em 0.15em 0 #561c51, -0.15em 0.15em 0 #561c51, -0.1em 0.15em 0 #561c51, 0em 0.15em 0 #561c51, 0.1em 0.15em 0 #561c51, 0.15em 0.15em 0 #561c51, 0.2em 0.15em 0 #561c51, 0.25em 0.15em 0 #561c51, -0.25em 0.125em 0 #561c51, -0.2em 0.125em 0 #561c51, -0.15em 0.125em 0 #561c51, -0.1em 0.125em 0 #561c51, 0em 0.125em 0 #561c51, 0.1em 0.125em 0 #561c51, 0.15em 0.125em 0 #561c51, 0.2em 0.125em 0 #561c51, 0.25em 0.125em 0 #561c51, -0.25em 0.1em 0 #561c51, -0.2em 0.1em 0 #561c51, -0.15em 0.1em 0 #561c51, -0.1em 0.1em 0 #561c51, 0em 0.1em 0 #561c51, 0.1em 0.1em 0 #561c51, 0.15em 0.1em 0 #561c51, 0.2em 0.1em 0 #561c51, 0.25em 0.1em 0 #561c51, -0.25em 0.075em 0 #561c51, -0.2em 0.075em 0 #561c51, -0.15em 0.075em 0 #561c51, -0.1em 0.075em 0 #561c51, 0em 0.075em 0 #561c51, 0.1em 0.075em 0 #561c51, 0.15em 0.075em 0 #561c51, 0.2em 0.075em 0 #561c51, 0.25em 0.075em 0 #561c51, -0.25em 0.05em 0 #561c51, -0.2em 0.05em 0 #561c51, -0.15em 0.05em 0 #561c51, -0.1em 0.05em 0 #561c51, 0em 0.05em 0 #561c51, 0.1em 0.05em 0 #561c51, 0.15em 0.05em 0 #561c51, 0.2em 0.05em 0 #561c51, 0.25em 0.05em 0 #561c51, -0.25em 0.025em 0 #561c51, -0.2em 0.025em 0 #561c51, -0.15em 0.025em 0 #561c51, -0.1em 0.025em 0 #561c51, 0em 0.025em 0 #561c51, 0.1em 0.025em 0 #561c51, 0.15em 0.025em 0 #561c51, 0.2em 0.025em 0 #561c51, 0.25em 0.025em 0 #561c51, -0.25em 0em 0 #561c51, -0.2em 0em 0 #561c51, -0.15em 0em 0 #561c51, -0.1em 0em 0 #561c51, 0em 0em 0 #561c51, 0.1em 0em 0 #561c51, 0.15em 0em 0 #561c51, 0.2em 0em 0 #561c51, 0.25em 0em 0 #561c51, -0.25em -0.025em 0 #561c51, -0.2em -0.025em 0 #561c51, -0.15em -0.025em 0 #561c51, -0.1em -0.025em 0 #561c51, 0em -0.025em 0 #561c51, 0.1em -0.025em 0 #561c51, 0.15em -0.025em 0 #561c51, 0.2em -0.025em 0 #561c51, 0.25em -0.025em 0 #561c51;
       background: selection-color; }
     a:hover::selection, a:active::selection {
-      text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+      text-shadow: -0.25em 0.2em 0 #561c51, -0.2em 0.2em 0 #561c51, -0.15em 0.2em 0 #561c51, -0.1em 0.2em 0 #561c51, 0em 0.2em 0 #561c51, 0.1em 0.2em 0 #561c51, 0.15em 0.2em 0 #561c51, 0.2em 0.2em 0 #561c51, 0.25em 0.2em 0 #561c51, -0.25em 0.15em 0 #561c51, -0.2em 0.15em 0 #561c51, -0.15em 0.15em 0 #561c51, -0.1em 0.15em 0 #561c51, 0em 0.15em 0 #561c51, 0.1em 0.15em 0 #561c51, 0.15em 0.15em 0 #561c51, 0.2em 0.15em 0 #561c51, 0.25em 0.15em 0 #561c51, -0.25em 0.125em 0 #561c51, -0.2em 0.125em 0 #561c51, -0.15em 0.125em 0 #561c51, -0.1em 0.125em 0 #561c51, 0em 0.125em 0 #561c51, 0.1em 0.125em 0 #561c51, 0.15em 0.125em 0 #561c51, 0.2em 0.125em 0 #561c51, 0.25em 0.125em 0 #561c51, -0.25em 0.1em 0 #561c51, -0.2em 0.1em 0 #561c51, -0.15em 0.1em 0 #561c51, -0.1em 0.1em 0 #561c51, 0em 0.1em 0 #561c51, 0.1em 0.1em 0 #561c51, 0.15em 0.1em 0 #561c51, 0.2em 0.1em 0 #561c51, 0.25em 0.1em 0 #561c51, -0.25em 0.075em 0 #561c51, -0.2em 0.075em 0 #561c51, -0.15em 0.075em 0 #561c51, -0.1em 0.075em 0 #561c51, 0em 0.075em 0 #561c51, 0.1em 0.075em 0 #561c51, 0.15em 0.075em 0 #561c51, 0.2em 0.075em 0 #561c51, 0.25em 0.075em 0 #561c51, -0.25em 0.05em 0 #561c51, -0.2em 0.05em 0 #561c51, -0.15em 0.05em 0 #561c51, -0.1em 0.05em 0 #561c51, 0em 0.05em 0 #561c51, 0.1em 0.05em 0 #561c51, 0.15em 0.05em 0 #561c51, 0.2em 0.05em 0 #561c51, 0.25em 0.05em 0 #561c51, -0.25em 0.025em 0 #561c51, -0.2em 0.025em 0 #561c51, -0.15em 0.025em 0 #561c51, -0.1em 0.025em 0 #561c51, 0em 0.025em 0 #561c51, 0.1em 0.025em 0 #561c51, 0.15em 0.025em 0 #561c51, 0.2em 0.025em 0 #561c51, 0.25em 0.025em 0 #561c51, -0.25em 0em 0 #561c51, -0.2em 0em 0 #561c51, -0.15em 0em 0 #561c51, -0.1em 0em 0 #561c51, 0em 0em 0 #561c51, 0.1em 0em 0 #561c51, 0.15em 0em 0 #561c51, 0.2em 0em 0 #561c51, 0.25em 0em 0 #561c51, -0.25em -0.025em 0 #561c51, -0.2em -0.025em 0 #561c51, -0.15em -0.025em 0 #561c51, -0.1em -0.025em 0 #561c51, 0em -0.025em 0 #561c51, 0.1em -0.025em 0 #561c51, 0.15em -0.025em 0 #561c51, 0.2em -0.025em 0 #561c51, 0.25em -0.025em 0 #561c51;
       background: selection-color; }
     a:hover::-moz-selection, a:active::-moz-selection {
-      text-shadow: -0.25em 0.2em 0 #fff, -0.15em 0.2em 0 #fff, -0.1em 0.2em 0 #fff, 0em 0.2em 0 #fff, 0.15em 0.2em 0 #fff, 0.25em 0.2em 0 #fff, -0.25em 0.125em 0 #fff, -0.15em 0.125em 0 #fff, 0em 0.125em 0 #fff, 0.15em 0.125em 0 #fff, 0.25em 0.125em 0 #fff, 0.1em 0.125em 0 #fff, -0.15em 0.1em 0 #fff, 0.15em 0.1em 0 #fff, -0.1em 0.1em 0 #fff, 0em 0.1em 0 #fff, 0.1em 0.1em 0 #fff;
+      text-shadow: -0.25em 0.2em 0 #561c51, -0.2em 0.2em 0 #561c51, -0.15em 0.2em 0 #561c51, -0.1em 0.2em 0 #561c51, 0em 0.2em 0 #561c51, 0.1em 0.2em 0 #561c51, 0.15em 0.2em 0 #561c51, 0.2em 0.2em 0 #561c51, 0.25em 0.2em 0 #561c51, -0.25em 0.15em 0 #561c51, -0.2em 0.15em 0 #561c51, -0.15em 0.15em 0 #561c51, -0.1em 0.15em 0 #561c51, 0em 0.15em 0 #561c51, 0.1em 0.15em 0 #561c51, 0.15em 0.15em 0 #561c51, 0.2em 0.15em 0 #561c51, 0.25em 0.15em 0 #561c51, -0.25em 0.125em 0 #561c51, -0.2em 0.125em 0 #561c51, -0.15em 0.125em 0 #561c51, -0.1em 0.125em 0 #561c51, 0em 0.125em 0 #561c51, 0.1em 0.125em 0 #561c51, 0.15em 0.125em 0 #561c51, 0.2em 0.125em 0 #561c51, 0.25em 0.125em 0 #561c51, -0.25em 0.1em 0 #561c51, -0.2em 0.1em 0 #561c51, -0.15em 0.1em 0 #561c51, -0.1em 0.1em 0 #561c51, 0em 0.1em 0 #561c51, 0.1em 0.1em 0 #561c51, 0.15em 0.1em 0 #561c51, 0.2em 0.1em 0 #561c51, 0.25em 0.1em 0 #561c51, -0.25em 0.075em 0 #561c51, -0.2em 0.075em 0 #561c51, -0.15em 0.075em 0 #561c51, -0.1em 0.075em 0 #561c51, 0em 0.075em 0 #561c51, 0.1em 0.075em 0 #561c51, 0.15em 0.075em 0 #561c51, 0.2em 0.075em 0 #561c51, 0.25em 0.075em 0 #561c51, -0.25em 0.05em 0 #561c51, -0.2em 0.05em 0 #561c51, -0.15em 0.05em 0 #561c51, -0.1em 0.05em 0 #561c51, 0em 0.05em 0 #561c51, 0.1em 0.05em 0 #561c51, 0.15em 0.05em 0 #561c51, 0.2em 0.05em 0 #561c51, 0.25em 0.05em 0 #561c51, -0.25em 0.025em 0 #561c51, -0.2em 0.025em 0 #561c51, -0.15em 0.025em 0 #561c51, -0.1em 0.025em 0 #561c51, 0em 0.025em 0 #561c51, 0.1em 0.025em 0 #561c51, 0.15em 0.025em 0 #561c51, 0.2em 0.025em 0 #561c51, 0.25em 0.025em 0 #561c51, -0.25em 0em 0 #561c51, -0.2em 0em 0 #561c51, -0.15em 0em 0 #561c51, -0.1em 0em 0 #561c51, 0em 0em 0 #561c51, 0.1em 0em 0 #561c51, 0.15em 0em 0 #561c51, 0.2em 0em 0 #561c51, 0.25em 0em 0 #561c51, -0.25em -0.025em 0 #561c51, -0.2em -0.025em 0 #561c51, -0.15em -0.025em 0 #561c51, -0.1em -0.025em 0 #561c51, 0em -0.025em 0 #561c51, 0.1em -0.025em 0 #561c51, 0.15em -0.025em 0 #561c51, 0.2em -0.025em 0 #561c51, 0.25em -0.025em 0 #561c51;
       background: selection-color; }
     a:hover:before, a:hover:after, a:hover *, a:hover *:before, a:hover *:after, a:active:before, a:active:after, a:active *, a:active *:before, a:active *:after {
       text-shadow: none; }
     a:hover:visited, a:active:visited {
-      color: #fff; }
+      color: #561c51; }
 
 #background {
   position: fixed;
@@ -90,3 +107,24 @@ a {
 .content {
   margin: 10%;
   max-width: 600px; }
+
+.footer-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6em; }
+  .footer-bar a:after {
+    height: 1px; }
+  .footer-bar a {
+    margin: 0 10%; }
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  font-size: 16px;
+  line-height: 1.6em; }
+  .modal a:after {
+    height: 1px; }

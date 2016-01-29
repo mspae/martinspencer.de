@@ -11,6 +11,9 @@
   "author": "Martin Spencer <mail@martinspencer.de>",
   "license": "ISC",
   "dependencies": {
+    "2d-context": "^1.3.0",
+    "canvas-loop": "^1.0.7",
+    "eases": "^1.0.8",
     "obfuscemail": "^0.1.2"
   },
   "devDependencies": {
