@@ -1,8 +1,9 @@
 const assign = require('lodash/assign')
+const classNames = require('classnames')
 
 ;(function () {
   class Gradient {
-    constructor(options, canvas) {
+    constructor (options, canvas) {
       this.canvas = canvas
       this.x0 = 100
       this.y0 = 100
@@ -13,10 +14,10 @@ const assign = require('lodash/assign')
 
       this.render()
     }
-    step() {
+    step () {
       this.render()
     }
-    render() {
+    render () {
       const ctx = this.canvas.getContext('2d')
       ctx.beginPath()
       this.gradient = ctx.createRadialGradient(this.x0, this.y0, this.r0, this.x1, this.y1, this.r1)
@@ -28,7 +29,7 @@ const assign = require('lodash/assign')
   }
 
   class Background {
-    constructor(options) {
+    constructor (options) {
       this.options = assign({}, {
         background: 'blue'
       }, options)
@@ -40,7 +41,7 @@ const assign = require('lodash/assign')
       this.resize()
       this.render()
     }
-    render() {
+    render () {
       const ctx = this.canvas.getContext('2d')
 
       ctx.beginPath()
@@ -70,40 +71,34 @@ const assign = require('lodash/assign')
   }
 
   function registerModals () {
-    const links = [].concat(document.querySelector('.modal-link'))
-    const modals = [].concat(document.querySelector('.modal'))
+    const modalLinks = document.querySelectorAll('.modal-link')
+    const closeLinks = document.querySelectorAll('.modal-close')
+    const modals = document.querySelectorAll('.modal')
 
-    links.forEach((link) => {
-      const modal = document.getElementById(link.getAttribute('href').substr(1))
+    ;[].forEach.call(modalLinks, (link) => {
+      console.log(link)
+      const modalId = link.getAttribute('href').substr(1)
 
       link.addEventListener('click', () => {
-        modals.forEach((modal) => {
-          removeClassName(modal, 'active-modal')
+        ;[].forEach.call(modals, (modal) => {
+          const classes = {
+            modal: true,
+            'active-modal': modal.getAttribute('id') === modalId
+          }
+          modal.setAttribute('class', classNames(classes))
         })
-        setClassNames(modal, getClassNames(modal).concat('active-modal'))
+      })
+    })
+
+    ;[].forEach.call(closeLinks, (link) => {
+      link.addEventListener('click', () => {
+        const classes = {
+          modal: true
+        }
+        ;[].forEach.call(modals, (modal) => {
+          modal.setAttribute('class', classNames(classes))
+        })
       })
     })
   }
 })()
-
-function removeClassName (el, classname) {
-  const classnames = getClassNames(el)
-  for (const i = classnames.length - 1; i >= 0; i--) {
-    if (classnames[i] === classname) {
-      classnames.splice(i, 1)
-    }
-  }
-  setClassNames(el, classnames)
-}
-
-function addClassName (el, classname) {
-  setClassNames(el, getClassNames(el).concat(classname))
-}
-
-function getClassNames (el) {
-  return el.getAttribute('class').trim().split(' ')
-}
-
-function setClassNames (el, classnames) {
-  return el.setAttribute('class', classnames.join(' '))
-}

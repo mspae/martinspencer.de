@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
 <body>
-  <div class="content">
+  <div id="content">
     <p>Hello, my name is Martin Spencer. I'm a web developer from Frankfurt, Germany.</p>
     <p>Find me on <a href="http://github.com">github.com</a> or <a href="http://linkedin.com">linkedin</a> or contact me via <span class="email-link">…</span>.</p>
   </div>
@@ -14,11 +14,19 @@
     <a href="#legal-info" class="modal-link">Contact information</a></p>
   </div>
 
-  <div class="modal" id="legal-info">
-    Martin Spencer<br />
-    Hügelstraße 95<br />
-    60433 Frankfurt<br />
-    <p><span class="email-link">…</span></p>
+  <div class="modal active-modal" id="legal-info">
+    <div class="modal-header">
+      <a class="modal-close" href="#content">←</a>
+      <h3>Contact information</h3>
+    </div>
+    <div class="modal-content">
+      <p>Martin Spencer<br />
+      Hügelstraße 95<br />
+      60433 Frankfurt<br /></p>
+      <p><span class="email-link">…</span></p>
+      <p>The code of this website is available on <a href="https://github.com/mspae/martinspencer.de">github.com</a></p>
+      <p><a href="http://overpassfont.org/">Overpass</a> font face by <a href="http://www.delvefonts.com/">Delve Fonts</a> (<a href="https://github.com/RedHatBrand/overpass/blob/master/LICENSE.md">View license</a>).</p>
+    </div>
   </div>
 
   <canvas id="background"></canvas>

@@ -127,7 +127,7 @@ a {
   z-index: -9;
 }
 
-.content {
+#content {
   margin: 10%;
   max-width: 600px;
 }
@@ -144,9 +144,29 @@ a {
 }
 
 .modal {
+  .modal-header {
+    .modal-close {
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+    .modal-close:after {
+      display: none;
+    }
+  }
+  opacity: 0;
+  transition: left 200ms ease-in-out, opacity 100ms ease-in-out 100ms;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  top: -100%;
+  height: 80%;
+  width: 80%;
+  left: 100%;
+  top: 0%;
   @include sm-font;
+  background: $body-bg;
+  padding: 2em;
+
+  &.active-modal {
+    opacity: 1;
+    left: 10%;
+  }
 }

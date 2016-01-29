@@ -86,17 +86,19 @@ gulp.task('sass', () => {
 
   return gulp.src(options.sassEntries)
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass().on('error', plugins.sass.logError))
+    .pipe(plugins.sass().on('error', onError))
+    .pipe(plugins.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+
+    .pipe(plugins.sourcemaps.init({loadMaps: true}))
     .pipe(plugins.autoprefixer({
-      browsers: [
-        'last 2 versions',
-      ],
+      browsers: ['last 1 version', '> 1%'],
       cascade: false
+    }).on('error', onError))
+    .pipe(plugins.sourcemaps.write({
+      includeContent: false,
+      sourceRoot: '../../src/scss'
     }))
-    .on('error', onError)
     .pipe(gulp.dest(options.sassOutput))
-    .on('error', onError)
-    .pipe(plugins.sourcemaps.write('./'))
     .pipe(plugins.livereload())
 })
 

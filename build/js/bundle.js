@@ -1,4 +1,54 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				classes.push(classNames.apply(null, arg));
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	} else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		// register as 'classnames', consistent with npm package name
+		define('classnames', [], function () {
+			return classNames;
+		});
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+},{}],2:[function(require,module,exports){
 var copyObject = require('./internal/copyObject'),
     createAssigner = require('./internal/createAssigner'),
     keys = require('./keys');
@@ -39,7 +89,7 @@ var assign = createAssigner(function(object, source) {
 
 module.exports = assign;
 
-},{"./internal/copyObject":9,"./internal/createAssigner":11,"./keys":26}],2:[function(require,module,exports){
+},{"./internal/copyObject":10,"./internal/createAssigner":12,"./keys":27}],3:[function(require,module,exports){
 /**
  * Performs a [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
  * comparison between two values to determine if they are equivalent.
@@ -76,7 +126,7 @@ function eq(value, other) {
 
 module.exports = eq;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /**
  * A faster alternative to `Function#apply`, this function invokes `func`
  * with the `this` binding of `thisArg` and the arguments of `args`.
@@ -100,7 +150,7 @@ function apply(func, thisArg, args) {
 
 module.exports = apply;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 (function (global){
 var eq = require('../eq');
 
@@ -133,7 +183,7 @@ module.exports = assignValue;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"../eq":2}],5:[function(require,module,exports){
+},{"../eq":3}],6:[function(require,module,exports){
 (function (global){
 /** Used for built-in method references. */
 var objectProto = global.Object.prototype;
@@ -164,7 +214,7 @@ module.exports = baseHas;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = Object.keys;
 
@@ -183,7 +233,7 @@ function baseKeys(object) {
 
 module.exports = baseKeys;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -199,7 +249,7 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -221,7 +271,7 @@ function baseTimes(n, iteratee) {
 
 module.exports = baseTimes;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var copyObjectWith = require('./copyObjectWith');
 
 /**
@@ -239,7 +289,7 @@ function copyObject(source, props, object) {
 
 module.exports = copyObject;
 
-},{"./copyObjectWith":10}],10:[function(require,module,exports){
+},{"./copyObjectWith":11}],11:[function(require,module,exports){
 var assignValue = require('./assignValue');
 
 /**
@@ -270,7 +320,7 @@ function copyObjectWith(source, props, object, customizer) {
 
 module.exports = copyObjectWith;
 
-},{"./assignValue":4}],11:[function(require,module,exports){
+},{"./assignValue":5}],12:[function(require,module,exports){
 var isIterateeCall = require('./isIterateeCall'),
     rest = require('../rest');
 
@@ -306,7 +356,7 @@ function createAssigner(assigner) {
 
 module.exports = createAssigner;
 
-},{"../rest":27,"./isIterateeCall":15}],12:[function(require,module,exports){
+},{"../rest":28,"./isIterateeCall":16}],13:[function(require,module,exports){
 var baseProperty = require('./baseProperty');
 
 /**
@@ -323,7 +373,7 @@ var getLength = baseProperty('length');
 
 module.exports = getLength;
 
-},{"./baseProperty":7}],13:[function(require,module,exports){
+},{"./baseProperty":8}],14:[function(require,module,exports){
 var baseTimes = require('./baseTimes'),
     isArguments = require('../isArguments'),
     isArray = require('../isArray'),
@@ -347,7 +397,7 @@ function indexKeys(object) {
 
 module.exports = indexKeys;
 
-},{"../isArguments":17,"../isArray":18,"../isLength":22,"../isString":25,"./baseTimes":8}],14:[function(require,module,exports){
+},{"../isArguments":18,"../isArray":19,"../isLength":23,"../isString":26,"./baseTimes":9}],15:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -370,7 +420,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var eq = require('../eq'),
     isArrayLike = require('../isArrayLike'),
     isIndex = require('./isIndex'),
@@ -400,7 +450,7 @@ function isIterateeCall(value, index, object) {
 
 module.exports = isIterateeCall;
 
-},{"../eq":2,"../isArrayLike":19,"../isObject":23,"./isIndex":14}],16:[function(require,module,exports){
+},{"../eq":3,"../isArrayLike":20,"../isObject":24,"./isIndex":15}],17:[function(require,module,exports){
 (function (global){
 /** Used for built-in method references. */
 var objectProto = global.Object.prototype;
@@ -423,7 +473,7 @@ module.exports = isPrototype;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 (function (global){
 var isArrayLikeObject = require('./isArrayLikeObject');
 
@@ -471,7 +521,7 @@ module.exports = isArguments;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./isArrayLikeObject":20}],18:[function(require,module,exports){
+},{"./isArrayLikeObject":21}],19:[function(require,module,exports){
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -499,7 +549,7 @@ var isArray = Array.isArray;
 
 module.exports = isArray;
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 var getLength = require('./internal/getLength'),
     isFunction = require('./isFunction'),
     isLength = require('./isLength');
@@ -536,7 +586,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./internal/getLength":12,"./isFunction":21,"./isLength":22}],20:[function(require,module,exports){
+},{"./internal/getLength":13,"./isFunction":22,"./isLength":23}],21:[function(require,module,exports){
 var isArrayLike = require('./isArrayLike'),
     isObjectLike = require('./isObjectLike');
 
@@ -570,7 +620,7 @@ function isArrayLikeObject(value) {
 
 module.exports = isArrayLikeObject;
 
-},{"./isArrayLike":19,"./isObjectLike":24}],21:[function(require,module,exports){
+},{"./isArrayLike":20,"./isObjectLike":25}],22:[function(require,module,exports){
 (function (global){
 var isObject = require('./isObject');
 
@@ -615,7 +665,7 @@ module.exports = isFunction;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./isObject":23}],22:[function(require,module,exports){
+},{"./isObject":24}],23:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -649,7 +699,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -682,7 +732,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -712,7 +762,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (global){
 var isArray = require('./isArray'),
     isObjectLike = require('./isObjectLike');
@@ -754,7 +804,7 @@ module.exports = isString;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./isArray":18,"./isObjectLike":24}],26:[function(require,module,exports){
+},{"./isArray":19,"./isObjectLike":25}],27:[function(require,module,exports){
 var baseHas = require('./internal/baseHas'),
     baseKeys = require('./internal/baseKeys'),
     indexKeys = require('./internal/indexKeys'),
@@ -811,7 +861,7 @@ function keys(object) {
 
 module.exports = keys;
 
-},{"./internal/baseHas":5,"./internal/baseKeys":6,"./internal/indexKeys":13,"./internal/isIndex":14,"./internal/isPrototype":16,"./isArrayLike":19}],27:[function(require,module,exports){
+},{"./internal/baseHas":6,"./internal/baseKeys":7,"./internal/indexKeys":14,"./internal/isIndex":15,"./internal/isPrototype":17,"./isArrayLike":20}],28:[function(require,module,exports){
 var apply = require('./internal/apply'),
     toInteger = require('./toInteger');
 
@@ -874,7 +924,7 @@ function rest(func, start) {
 
 module.exports = rest;
 
-},{"./internal/apply":3,"./toInteger":28}],28:[function(require,module,exports){
+},{"./internal/apply":4,"./toInteger":29}],29:[function(require,module,exports){
 var toNumber = require('./toNumber');
 
 /** Used as references for various `Number` constants. */
@@ -920,7 +970,7 @@ function toInteger(value) {
 
 module.exports = toInteger;
 
-},{"./toNumber":29}],29:[function(require,module,exports){
+},{"./toNumber":30}],30:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isObject = require('./isObject');
 
@@ -981,14 +1031,15 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isFunction":21,"./isObject":23}],30:[function(require,module,exports){
+},{"./isFunction":22,"./isObject":24}],31:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var assign = require('lodash/assign');(function () {
+var assign = require('lodash/assign');
+var classNames = require('classnames');(function () {
   var Gradient = function () {
     function Gradient(options, canvas) {
       _classCallCheck(this, Gradient);
@@ -1076,42 +1127,34 @@ var assign = require('lodash/assign');(function () {
   }
 
   function registerModals() {
-    var links = [].concat(document.querySelector('.modal-link'));
-    var modals = [].concat(document.querySelector('.modal'));
-
-    links.forEach(function (link) {
-      var modal = document.getElementById(link.getAttribute('href').substr(1));
+    var modalLinks = document.querySelectorAll('.modal-link');
+    var closeLinks = document.querySelectorAll('.modal-close');
+    var modals = document.querySelectorAll('.modal');[].forEach.call(modalLinks, function (link) {
+      console.log(link);
+      var modalId = link.getAttribute('href').substr(1);
 
       link.addEventListener('click', function () {
-        setClassNames(modal, getClassNames(modal).concat('active-modal'));
+        ;[].forEach.call(modals, function (modal) {
+          var classes = {
+            modal: true,
+            'active-modal': modal.getAttribute('id') === modalId
+          };
+          modal.setAttribute('class', classNames(classes));
+        });
+      });
+    });[].forEach.call(closeLinks, function (link) {
+      link.addEventListener('click', function () {
+        var classes = {
+          modal: true
+        };[].forEach.call(modals, function (modal) {
+          modal.setAttribute('class', classNames(classes));
+        });
       });
     });
   }
 })();
 
-function removeClassName(el, classname) {
-  var classnames = getClassNames(el);
-  for (var i = classnames.length - 1; i >= 0; i--) {
-    if (classnames[i] === classname) {
-      classnames.splice(i, 1);
-    }
-  }
-  setClassNames(el, classnames);
-}
-
-function addClassName(el, classname) {
-  setClassNames(el, getClassNames(el).concat(classname));
-}
-
-function getClassNames(el) {
-  return el.getAttribute('class').trim().split(' ');
-}
-
-function setClassNames(el, classnames) {
-  return el.setAttribute('class', classnames.join(' '));
-}
-
-},{"lodash/assign":1}]},{},[30])
+},{"classnames":1,"lodash/assign":2}]},{},[31])
 
 
 //# sourceMappingURL=bundle.js.map
