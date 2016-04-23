@@ -1,17 +1,11 @@
 const classNames = require('classnames')
-// const underline = require('underlinejs')
-// const canvas = require('./canvas').default
-// const Shading = require('./shading')
 
 ;(function () {
   window.addEventListener('load', initialise)
-  let shading = null
 
   function initialise () {
     registerModals()
     emailLinks()
-  // canvas()
-  // if (!shading) shading = new Shading()
   }
 
   function emailLinks () {
@@ -41,6 +35,9 @@ const classNames = require('classnames')
       const modalId = link.getAttribute('href').substr(1)
 
       link.addEventListener('click', (e) => {
+        const bodyClasses = {
+          'active-modal': true
+        }
         ;[].forEach.call(modals, (modal) => {
           const classes = {
             modal: true,
@@ -48,6 +45,7 @@ const classNames = require('classnames')
           }
           modal.setAttribute('class', classNames(classes))
         })
+        body.setAttribute('class', classNames(bodyClasses))
         e.preventDefault()
       })
     })
@@ -57,9 +55,14 @@ const classNames = require('classnames')
         const classes = {
           modal: true
         }
+        const bodyClasses = {
+          'active-modal': false
+        }
         ;[].forEach.call(modals, (modal) => {
           modal.setAttribute('class', classNames(classes))
         })
+
+        body.setAttribute('class', classNames(bodyClasses))
         e.preventDefault()
       })
     })

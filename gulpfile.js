@@ -6,7 +6,6 @@ const watchify = require('watchify')
 const buffer = require('vinyl-buffer')
 const source = require('vinyl-source-stream')
 const plugins = require('gulp-load-plugins')()
-const standardFormat = require('standard-format')
 
 const options = {
   jsEntries: ['./src/js/main.js'],

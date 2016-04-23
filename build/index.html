@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>_-_</title>
-  <meta charset="utf-8" />
+  <title>Martin Spencer _-_</title>
+  <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
 <body itemscope itemtype="http://schema.org/Person">
   <div id="content">
-    <p>Hello, my name is <span itemprop="name">Martin Spencer</span>. I'm a <span itemprop="jobTitle">web developer</span> from Frankfurt, Germany.</p>
-    <p>You can find me on <a href="http://github.com">github.com</a> or <a href="http://linkedin.com">linkedin</a>.</p>
+    <p><h1>Hello, my name is <span itemprop="name">Martin Spencer</span>.</h1> I'm a <span itemprop="jobTitle">web developer</span> from Frankfurt, Germany.</p>
+    <p>You can find me on <a href="http://github.com/mspae">github.com</a>, <a href="https://www.linkedin.com/in/martin-spencer-a2b8a589">LinkedIn</a> or <a href="https://www.xing.com/profile/Martin_Spencer2">Xing</a>.</p>
     <p>Contact me via <span class="email-link">…</span>.</p>
   </div>
   <div class="footer-bar">
@@ -17,7 +17,7 @@
 
   <div class="modal" id="legal-info">
     <div class="modal-header">
-      <a class="modal-close" href="#content">←</a>
+      <a class="modal-close" href="#content" aria-label="Back to content">←</a>
       <h3>Contact & legal information</h3>
     </div>
     <div class="modal-content">
@@ -25,12 +25,11 @@
       <span itemprop="streetAddress">Hügelstraße 95</span><br />
       <span itemprop="postalCode">960433</span> <span itemprop="addressLocality">Frankfurt</span><br /></p>
       <p><span class="email-link">…</span></p>
-      <p>The code of this website is available on <a href="https://github.com/mspae/martinspencer.de">github.com</a></p>
       <p><a href="http://overpassfont.org/">Overpass</a> font face by <a href="http://www.delvefonts.com/">Delve Fonts</a> (<a href="https://github.com/RedHatBrand/overpass/blob/master/LICENSE.md">View license</a>).</p>
     </div>
   </div>
 
-  <div id="background"></div>
+  <a id="background" class="modal-close" href="#content" aria-label="Back to content"></a>
 
   <script src="js/bundle.js"></script>
 
