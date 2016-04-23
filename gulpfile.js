@@ -85,6 +85,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./'))*/
 
   return gulp.src(options.sassEntries)
+    .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass().on('error', onError))
     .pipe(plugins.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
@@ -104,6 +105,7 @@ gulp.task('sass', () => {
 
 gulp.task('img', () => {
   return gulp.src(options.imgFiles)
+    .pipe(plugins.plumber())
     .pipe(plugins.imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}]
@@ -116,6 +118,7 @@ gulp.task('img', () => {
 
 gulp.task('font', () => {
   return gulp.src(options.fontFiles)
+    .pipe(plugins.plumber())
     .pipe(gulp.dest(options.fontOutput))
     .on('error', onError)
     .pipe(plugins.livereload())
@@ -123,6 +126,7 @@ gulp.task('font', () => {
 
 gulp.task('html', () => {
   return gulp.src(options.htmlFiles)
+    .pipe(plugins.plumber())
     .pipe(gulp.dest(options.htmlOutput))
     .on('error', onError)
     .pipe(plugins.livereload())

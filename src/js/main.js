@@ -1,85 +1,46 @@
-const assign = require('lodash/assign')
 const classNames = require('classnames')
-
-;(function () {
-  class Gradient {
-    constructor (options, canvas) {
-      this.canvas = canvas
-      this.x0 = 100
-      this.y0 = 100
-      this.r0 = 100
-      this.x1 = 100
-      this.y1 = 100
-      this.r1 = 0
-
-      this.render()
-    }
-    step () {
-      this.render()
-    }
-    render () {
-      const ctx = this.canvas.getContext('2d')
-      ctx.beginPath()
-      this.gradient = ctx.createRadialGradient(this.x0, this.y0, this.r0, this.x1, this.y1, this.r1)
-      this.gradient.addColorStop(0, 'white')
-      this.gradient.addColorStop(1, 'green')
-      ctx.fillStyle = this.gradient
-      ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
-    }
-  }
-
-  class Background {
-    constructor (options) {
-      this.options = assign({}, {
-        background: 'blue'
-      }, options)
-
-      this.canvas = document.getElementById('background')
-      this.context = this.canvas.getContext('2d')
-      this.gradients = []
-      window.onresize = this.resize
-      this.resize()
-      this.render()
-    }
-    render () {
-      const ctx = this.canvas.getContext('2d')
-
-      ctx.beginPath()
-      ctx.rect(0, 0, this.canvas.width, this.canvas.height)
-      ctx.fillStyle = this.options.background
-      ctx.fill()
-      const gradient = new Gradient(null, this.canvas)
-
-      window.requestAnimationFrame(this.render.bind(this))
-    }
-    resize() {
-      this.canvas.height = window.innerHeight
-      this.canvas.width = window.innerWidth
-    }
-  }
-
-/*const bg = new Background({
-  background: 'red'
-})*/
-})()
+//const underline = require('underlinejs')
+//const canvas = require('./canvas').default
+//const Shading = require('./shading')
 
 ;(function () {
   window.addEventListener('load', initialise)
+  let shading = null
 
   function initialise () {
     registerModals()
+    emailLinks()
+    //canvas()
+    //if (!shading) shading = new Shading()
+  }
+
+  function emailLinks () {
+    const email = rot13('znvy@znegvafcrapre.qr')
+
+    function rot13 (cypher) {
+      return cypher.replace(/[a-zA-Z]/g, function (e) {
+        return String.fromCharCode((e <= 'Z' ? 90 : 122) >= (e = e.charCodeAt(0) + 13) ? e : e - 26)
+      })
+    }
+
+    ;[].forEach.call(document.querySelectorAll('.email-link'), (wrapper) => {
+      const link = document.createElement('a')
+      link.href = 'mailto:' + email
+      link.innerHTML = email
+      wrapper.parentNode.replaceChild(link, wrapper)
+    })
   }
 
   function registerModals () {
+    const body = document.getElementsByTagName('body')[0];
     const modalLinks = document.querySelectorAll('.modal-link')
     const closeLinks = document.querySelectorAll('.modal-close')
     const modals = document.querySelectorAll('.modal')
 
     ;[].forEach.call(modalLinks, (link) => {
-      console.log(link)
       const modalId = link.getAttribute('href').substr(1)
 
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
         ;[].forEach.call(modals, (modal) => {
           const classes = {
             modal: true,
@@ -87,17 +48,19 @@ const classNames = require('classnames')
           }
           modal.setAttribute('class', classNames(classes))
         })
+        e.preventDefault()
       })
     })
 
     ;[].forEach.call(closeLinks, (link) => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
         const classes = {
           modal: true
         }
         ;[].forEach.call(modals, (modal) => {
           modal.setAttribute('class', classNames(classes))
         })
+        e.preventDefault()
       })
     })
   }

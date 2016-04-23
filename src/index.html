@@ -5,36 +5,34 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="scss/style.css">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Person">
   <div id="content">
-    <p>Hello, my name is Martin Spencer. I'm a web developer from Frankfurt, Germany.</p>
-    <p>Find me on <a href="http://github.com">github.com</a> or <a href="http://linkedin.com">linkedin</a> or contact me via <span class="email-link">…</span>.</p>
+    <p>Hello, my name is <span itemprop="name">Martin Spencer</span>. I'm a <span itemprop="jobTitle">web developer</span> from Frankfurt, Germany.</p>
+    <p>You can find me on <a href="http://github.com">github.com</a> or <a href="http://linkedin.com">linkedin</a>.</p>
+    <p>Contact me via <span class="email-link">…</span>.</p>
   </div>
   <div class="footer-bar">
-    <a href="#legal-info" class="modal-link">Contact information</a></p>
+    <a href="#legal-info" class="modal-link">Contact & legal information</a></p>
   </div>
 
-  <div class="modal active-modal" id="legal-info">
+  <div class="modal" id="legal-info">
     <div class="modal-header">
       <a class="modal-close" href="#content">←</a>
-      <h3>Contact information</h3>
+      <h3>Contact & legal information</h3>
     </div>
     <div class="modal-content">
-      <p>Martin Spencer<br />
-      Hügelstraße 95<br />
-      60433 Frankfurt<br /></p>
+      <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Martin Spencer<br />
+      <span itemprop="streetAddress">Hügelstraße 95</span><br />
+      <span itemprop="postalCode">960433</span> <span itemprop="addressLocality">Frankfurt</span><br /></p>
       <p><span class="email-link">…</span></p>
       <p>The code of this website is available on <a href="https://github.com/mspae/martinspencer.de">github.com</a></p>
       <p><a href="http://overpassfont.org/">Overpass</a> font face by <a href="http://www.delvefonts.com/">Delve Fonts</a> (<a href="https://github.com/RedHatBrand/overpass/blob/master/LICENSE.md">View license</a>).</p>
     </div>
   </div>
 
-  <canvas id="background"></canvas>
+  <div id="background"></div>
 
   <script src="js/bundle.js"></script>
-  <script>!function(){
-    function e(e,r){
-      var n = document.getElementsByClassName("email-link");
-      for(var a=n.length; a--;){var t=n[a],c=document.createElement("a");c.href="mailto:"+e,c.innerHTML=r,t.parentNode.replaceChild(c,t)}}function r(e){return e.replace(/[a-zA-Z]/g,function(e){return String.fromCharCode(("Z">=e?90:122)>=(e=e.charCodeAt(0)+13)?e:e-26)})}var n="znvy@znegvafcrapre.qr",a="znvy@znegvafcrapre.qr";e(r(n),r(a))}();</script>
+
     </body>
   </html>
