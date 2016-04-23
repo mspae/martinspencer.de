@@ -1,7 +1,7 @@
 const classNames = require('classnames')
-//const underline = require('underlinejs')
-//const canvas = require('./canvas').default
-//const Shading = require('./shading')
+// const underline = require('underlinejs')
+// const canvas = require('./canvas').default
+// const Shading = require('./shading')
 
 ;(function () {
   window.addEventListener('load', initialise)
@@ -10,8 +10,8 @@ const classNames = require('classnames')
   function initialise () {
     registerModals()
     emailLinks()
-    //canvas()
-    //if (!shading) shading = new Shading()
+  // canvas()
+  // if (!shading) shading = new Shading()
   }
 
   function emailLinks () {
@@ -32,7 +32,7 @@ const classNames = require('classnames')
   }
 
   function registerModals () {
-    const body = document.getElementsByTagName('body')[0];
+    const body = document.getElementsByTagName('body')[0]
     const modalLinks = document.querySelectorAll('.modal-link')
     const closeLinks = document.querySelectorAll('.modal-close')
     const modals = document.querySelectorAll('.modal')
